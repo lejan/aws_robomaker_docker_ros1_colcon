@@ -30,7 +30,11 @@ RUN apt-get install libgdal-dev -y
 RUN apt-get update
 RUN apt-get upgrade -y
 
+# Workspace
+RUN mkdir -p /home/lejan/project_ws/src/ && \
+    chown -R ${user} /home/lejan/project_ws
 USER ${user}
-
+WORKDIR /home/lejan/project_ws/
+# RUN rosdep update
 
 
