@@ -31,10 +31,10 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Workspace
-RUN mkdir -p /home/lejan/project_ws/src/ && \
-    chown -R ${user} /home/lejan/project_ws
+RUN mkdir -p /home/${user}/project_ws/src/ && \
+    chown -R ${user} /home/${user}/project_ws
 USER ${user}
-WORKDIR /home/lejan/project_ws/
+WORKDIR /home/${user}/project_ws/
 # RUN rosdep update
 
 
