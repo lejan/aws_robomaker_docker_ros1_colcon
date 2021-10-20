@@ -1,5 +1,5 @@
 FROM nvidia/opengl:1.0-glvnd-runtime-ubuntu16.04 as nvidia
-FROM bionic_melodic_gaz9_chapa_robomaker_starting
+FROM bionic_melodic_gaz9_robomaker_starting
 LABEL maintainer="lejan"
 
 # Installing OpenGL for nvidia-docker2
@@ -13,4 +13,4 @@ ENV NVIDIA_DRIVER_CAPABILITIES=all
 USER root
 RUN apt-get update
 
-USER lejan
+USER ${user}
