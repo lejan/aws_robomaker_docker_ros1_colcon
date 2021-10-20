@@ -11,12 +11,6 @@ cd aws_robomaker_docker_ros1_colcon/docker
 make build
 ```
 
-## Usage
-Now you can instantiate a container and run it every time you want.
-```bash
-make run
-```
-
 ## Configuring
 There is one main file to be modified:
 * Dockerfile
@@ -27,6 +21,14 @@ For example:
 ```bash
 ARG user="your_user_name"
 ```
+
+
+## Usage
+Now you can instantiate a container and run it every time you want.
+```bash
+make run
+```
+
 
 # Script
 After runing the docker container you need to run a script that will setup your workstation:
